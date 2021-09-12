@@ -17,6 +17,25 @@ function sumZero(arr){
     return result;
 }
 
+function countUniqueValues(arr){
+   let left =0;
+   let right =1;
+
+   while(right < arr.length){
+       if(arr[left] == arr[right]){
+           right++;
+       }
+       else{
+           arr[++left] = arr[right++];
+       }
+   }
+   return left + 1;
+}
+
+
+console.log(countUniqueValues([1,1,1,1,12]));
+console.log(countUniqueValues([1,2,3,4,4,4,7,7,12,12,13]));
+
 console.log(sumZero([-3,-1,0,3]));
 console.log(sumZero([-2,0, 1,3]));
 console.log(sumZero([1,2,3]));
