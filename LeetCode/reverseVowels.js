@@ -16,7 +16,7 @@ var reverseVowels = function(s) {
         }
 
         let temp = s[left];
-        s[left] = s[right];
+        s[left++] = s[right];
         s[right--] = temp;
     }
 
@@ -28,4 +28,4 @@ var reverseVowels = function(s) {
 // console.log(reverseVowels(""));
 // console.log(reverseVowels(" "));
 // console.log(reverseVowels("a."));
-console.log(reverseVowels("aA"));
+console.log(reverseVowels("race car"));
